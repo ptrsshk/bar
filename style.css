@@ -41,6 +41,44 @@ h2 {
   max-width: 600px;
 }
 
+input {
+  font-family: Rufina;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  font-family: Rufina;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.accentBG {
+  background-color: #FFA567;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.accentBG:hover {
+  background-color: #feac75;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
+}
+
+.reserveButton {
+  cursor: pointer;
+  padding: 12px 30px;
+  background-color: #FFA567;
+  border-radius: 10px;
+}
+.reserveButton:hover {
+  text-shadow: none;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -127,74 +165,55 @@ main section {
           align-items: center;
 }
 
-#discover {
-  background: url(assets/gradient.svg);
-  background-size: cover;
+.discover {
+  background: radial-gradient(ellipse at 120% 150%, #fffbf5 0%, #ffe0e0 23%, #fff9e5 64%, #ece6fa 100%);
 }
-#discover .sectionContainer {
+.discover .sectionContainer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
-#discover .sectionContainer img {
-  height: 500px;
+.discover .sectionContainer .imgContainer {
+  max-width: 500px;
+  margin-left: 30px;
+}
+.discover .sectionContainer .imgContainer img {
+  width: 100%;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
 }
-#discover .containerText h1 {
+.discover .containerText h1 {
   max-width: 700px;
 }
+.discover .containerText p {
+  max-width: 560px;
+}
 
-#cocktails .sectionContainer {
+.cocktails .sectionContainer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
-#cocktails .sectionContainer img {
-  height: 600px;
+.cocktails .sectionContainer img {
+  max-width: 500px;
+  width: 100%;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
 }
-#cocktails .sectionContainer .containerText h2 {
+.cocktails .sectionContainer .containerText h2 {
   max-width: 600px;
 }
 
-button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  border-radius: 10px;
-  padding: 12px 30px;
-  font-family: Rufina;
-  font-size: 16px;
-  font-weight: 500;
-}
-button.accentBG {
-  background-color: #FFA567;
-  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-button.accentBG:hover {
-  background-color: #feac75;
-  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
-          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
-}
-
-#events .sectionContainer {
+.events .sectionContainer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -205,16 +224,16 @@ button.accentBG:hover {
   text-align: center;
   gap: 50px;
 }
-#events .sectionContainer h2 {
+.events .sectionContainer h2 {
   max-width: 1000px;
 }
-#events .sectionContainer .eventsContainer {
+.events .sectionContainer .eventsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
 }
-#events .sectionContainer .eventsContainer .event {
+.events .sectionContainer .eventsContainer .event {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,14 +246,14 @@ button.accentBG:hover {
           align-items: center;
   max-width: 400px;
 }
-#events .sectionContainer .eventsContainer .event img {
+.events .sectionContainer .eventsContainer .event img {
   width: 100%;
   border-radius: 20px;
 }
-#events .sectionContainer .eventsContainer .event p {
+.events .sectionContainer .eventsContainer .event p {
   max-width: 380px;
 }
-#events .sectionContainer .eventsContainer .event a {
+.events .sectionContainer .eventsContainer .event a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,30 +262,30 @@ button.accentBG:hover {
   text-wrap: nowrap;
 }
 
-#reserve {
+.reserve {
   background: -webkit-gradient(linear, right top, left top, from(rgb(255, 251, 245)), to(rgb(255, 232, 232)));
   background: linear-gradient(270deg, rgb(255, 251, 245) 0%, rgb(255, 232, 232) 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 50px;
 }
-#reserve .sectionContainer {
+.reserve .sectionContainer {
   gap: 50px;
   border: 1px solid #1C2936;
   border-radius: 20px;
   padding: 50px 100px;
   margin: 50px auto;
 }
-#reserve .sectionContainer .textContainer {
+.reserve .sectionContainer .textContainer {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
 }
-#reserve .sectionContainer .textContainer h2 {
+.reserve .sectionContainer .textContainer h2 {
   max-width: none;
-  font-size: 40px;
 }
-#reserve .sectionContainer .inputContainer {
+.reserve .sectionContainer .inputContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,18 +300,17 @@ button.accentBG:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-#reserve .sectionContainer .inputContainer .inputWithButton {
+.reserve .sectionContainer .inputContainer .inputWithButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
-#reserve .sectionContainer .inputContainer .inputWithButton input {
+.reserve .sectionContainer .inputContainer .inputWithButton input {
   border-radius: 10px;
   border: 1px solid #1C2936;
   padding: 12px 30px;
   background: transparent;
-  font-family: Rufina;
   font-size: 16px;
   line-height: 100%;
   -webkit-box-flex: 1;
@@ -301,52 +319,89 @@ button.accentBG:hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-#reserve .sectionContainer .inputContainer .inputWithButton input::-webkit-input-placeholder {
+.reserve .sectionContainer .inputContainer .inputWithButton input::-webkit-input-placeholder {
   color: #1C2936;
 }
-#reserve .sectionContainer .inputContainer .inputWithButton input::-moz-placeholder {
+.reserve .sectionContainer .inputContainer .inputWithButton input::-moz-placeholder {
   color: #1C2936;
 }
-#reserve .sectionContainer .inputContainer .inputWithButton input:-ms-input-placeholder {
+.reserve .sectionContainer .inputContainer .inputWithButton input:-ms-input-placeholder {
   color: #1C2936;
 }
-#reserve .sectionContainer .inputContainer .inputWithButton input::-ms-input-placeholder {
+.reserve .sectionContainer .inputContainer .inputWithButton input::-ms-input-placeholder {
   color: #1C2936;
 }
-#reserve .sectionContainer .inputContainer .inputWithButton input::placeholder {
+.reserve .sectionContainer .inputContainer .inputWithButton input::placeholder {
   color: #1C2936;
 }
-#reserve .sectionContainer .inputContainer .inputWithButton input:hover {
+.reserve .sectionContainer .inputContainer .inputWithButton input:hover {
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 }
-#reserve .sectionContainer .inputContainer .inputWithButton input:focus-visible {
+.reserve .sectionContainer .inputContainer .inputWithButton input:focus-visible {
   outline: 0;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 }
-#reserve .sectionContainer .inputContainer .inputWithButton button {
+.reserve .sectionContainer .inputContainer .inputWithButton button {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
   line-height: 100%;
 }
-#reserve .sectionContainer .inputContainer p {
+.reserve .sectionContainer .inputContainer p {
   max-width: none;
   font-size: 12px;
   color: rgba(28, 41, 54, 0.6392156863);
   margin: 15px 0;
 }
+@media (max-width: 1200px) {
+  .reserve .sectionContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 50px;
+    gap: 25px;
+  }
+  .reserve .sectionContainer p {
+    text-align: center;
+  }
+  .reserve .sectionContainer h2 {
+    text-align: center;
+  }
+  .reserve .sectionContainer .inputContainer .inputWithButton {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reserve .sectionContainer .inputContainer .inputWithButton input {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 7px;
+  }
+  .reserve .sectionContainer .inputContainer .inputWithButton button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
 
-#craft .sectionContainer {
+.craft .sectionContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
 }
-#craft .sectionContainer img {
+.craft .sectionContainer img {
   border-radius: 20px;
   max-height: 500px;
+  max-width: 500px;
 }
-#craft .sectionContainer .textContainer {
+.craft .sectionContainer .textContainer {
   max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -357,17 +412,16 @@ button.accentBG:hover {
           flex-direction: column;
   gap: 30px;
 }
-#craft .sectionContainer .textContainer h2 {
-  font-size: 40px;
-  max-width: none;
+.craft .sectionContainer .textContainer h2 {
+  max-width: 600px;
 }
-#craft .sectionContainer .textContainer .offersContainer {
+.craft .sectionContainer .textContainer .offersContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
 }
-#craft .sectionContainer .textContainer .offersContainer .offer {
+.craft .sectionContainer .textContainer .offersContainer .offer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,12 +430,204 @@ button.accentBG:hover {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-#craft .sectionContainer .textContainer .offersContainer .offer h3 {
+.craft .sectionContainer .textContainer .offersContainer .offer h3 {
   margin: 10px 0;
 }
-#craft .sectionContainer .textContainer .offersContainer .offer p {
+.craft .sectionContainer .textContainer .offersContainer .offer p {
   margin: 0;
 }
-#craft .sectionContainer .textContainer .offersContainer .offer img {
+.craft .sectionContainer .textContainer .offersContainer .offer img {
   width: 48px;
+}
+
+.workshop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: radial-gradient(ellipse farthest-corner at 140% 70%, #fffbf5 0%, #ffe0e0 23%, #fff9e5 64%, #ece6fa 100%);
+  padding: 0 50px;
+}
+.workshop .sectionContainer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #1C2936;
+  border-radius: 20px;
+  max-width: 1100px;
+  padding: 50px 170px;
+  margin: 100px auto;
+  background: #FFFBF5;
+}
+.workshop .sectionContainer h2 {
+  text-align: center;
+  max-width: none;
+}
+.workshop .sectionContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+.workshop .sectionContainer form input[type=text], .workshop .sectionContainer form input[type=email] {
+  padding: 15px;
+  margin: 10px 0 30px 0;
+  border: 1px solid #1C2936;
+  border-radius: 5px;
+  background-color: transparent;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.workshop .sectionContainer form input[type=text]:hover, .workshop .sectionContainer form input[type=email]:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.workshop .sectionContainer form input[type=text]:focus-visible, .workshop .sectionContainer form input[type=email]:focus-visible {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.workshop .sectionContainer form textarea {
+  resize: none;
+  border: 1px solid #1C2936;
+  background-color: transparent;
+  font-family: Rufina;
+  padding: 15px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.workshop .sectionContainer form textarea:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.workshop .sectionContainer form textarea:focus-visible {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.workshop .sectionContainer form p {
+  font-size: 10px;
+  color: rgba(28, 41, 54, 0.6392156863);
+  margin-bottom: 30px;
+}
+.workshop .sectionContainer form button {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .discover .sectionContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+  }
+  .discover .sectionContainer .imgContainer {
+    margin-left: 0;
+  }
+  .cocktails .sectionContainer {
+    gap: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cocktails .sectionContainer img {
+    width: 100%;
+  }
+  .events .sectionContainer .eventsContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .craft .sectionContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .craft .sectionContainer img {
+    width: 100%;
+  }
+  .workshop .sectionContainer {
+    padding: 30px 20px;
+  }
+  .workshop .sectionContainer p {
+    text-align: center;
+    max-width: 80%;
+  }
+  .workshop .sectionContainer form input[type=text], .workshop .sectionContainer form input[type=email] {
+    padding: 7px;
+  }
+  .workshop .sectionContainer form textarea {
+    padding: 7px;
+  }
+}
+@media (max-width: 650px) {
+  header .sectionContainer {
+    padding: 0 25px;
+  }
+  header .sectionContainer nav {
+    display: none;
+    gap: 10px;
+  }
+  header .sectionContainer nav a.reserveButton {
+    padding: 8px 20px;
+  }
+  .sectionContainer {
+    padding: 50px 25px;
+  }
+  .sectionContainer .imgContainer {
+    max-width: 400px;
+  }
+  .sectionContainer .textContainer p {
+    font-style: 14px;
+  }
+  .sectionContainer .textContainer h2 {
+    font-size: 35px;
+  }
+  .sectionContainer p {
+    font-size: 14px;
+  }
+  a.reserveButton {
+    padding: 8px 20px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .discover h1 {
+    font-size: 40px;
+  }
+  .discover p {
+    font-size: 16px;
+  }
+  .discover .containerButtons {
+    gap: 25px;
+  }
+  .discover .containerButtons:last-child {
+    font-size: 14px;
+  }
+  .reserve .sectionContainer {
+    padding: 30px 20px;
+  }
+  .reserve .sectionContainer input#tel {
+    font-size: 12px;
+  }
 }

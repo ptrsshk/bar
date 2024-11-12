@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bar</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Rufina:regular,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Rufina:regular,700" rel="stylesheet">
     
 </head>
 <body>
@@ -25,51 +25,49 @@
       <a href="#workshops">
         Workshops
       </a>
-      <a href="#reserve">
-        <button type="button" class="accentBG">
+      <a href="#reserve" class="reserveButton accentBG">
           Reserve
-        </button>
       </a>
     </nav>
   </div>
 </header>
 
 <main>
-    <section id="discover">
+    <section id="discover" class="discover">
       <div class="sectionContainer">
         <div class="containerText">
           <h1>Discover extraordinary cocktails at our bar</h1>
           <p>Enjoy a one-of-a-kind cocktail experience that delights your taste buds. Join us for creative drinks made with passion!</p>
           <div class="containerButtons">
-            <a href="#reserve">
-              <button type="button" class="accentBG">
-                Reserve
-              </button>
-            </a>
+            <a href="#reserve" class="reserveButton accentBG">
+              Reserve
+          </a>
             <a href="">Learn more</a>
           </div>
         </div>
-        <img src="assets/discover.png" alt="cocktails image">
+        <div class="imgContainer">
+          <img src="assets/discover.png" alt="cocktails image">
+        </div>
       </div>
     </section>
-    <section id="cocktails">
+    <section id="cocktails" class="cocktails">
       <div class="sectionContainer">
-        <img src="assets/cocktails.png" alt="cocktails image">
+        <div class="imgContainer">
+          <img src="assets/cocktails.png" alt="cocktails image">
+        </div>
         <div class="containerText">
           <h2>Our unique<br>cocktails creations</h2>
           <p>Indulge in our handcrafted cocktails, each with a story to tell. Experience flavors that tantalize your taste buds and elevate your night out.</p>
           <div class="containerButtons">
-            <a href="#reserve">
-              <button type="button" class="accentBG">
-                Reserve
-              </button>
-            </a>
+            <a href="#reserve" class="reserveButton accentBG">
+              Reserve
+          </a>
             <a href="">Our menu</a>
           </div>
         </div>
       </div>
     </section>
-    <section id="events">
+    <section id="events" class="events">
       <div class="sectionContainer">
         <h2>Your Perfect Event with Our Unique Cocktails and Shots</h2>
         <div class="eventsContainer">
@@ -79,7 +77,7 @@
             <p>Learn the art of cocktail making in a fun and engaging setting.</p>
             <a href="">
               Learn more
-              <img src="assets/arrowRight.svg" height="25px" alt="">
+              <img src="assets/arrowRight.svg" height="25" alt="">
             </a>
           </div>
           <div class="event">
@@ -88,7 +86,7 @@
             <p>Make your event unforgettable with our unique cocktails, vibrant atmosphere, and tailored experiences. Book with us for a one-of-a-kind celebration that your guests will rave about!</p>
             <a href="">
               Explore
-              <img src="assets/arrowRight.svg" height="25px" alt="">
+              <img src="assets/arrowRight.svg" height="25" alt="">
             </a>
           </div>
           <div class="event">
@@ -96,7 +94,7 @@
             <h3>Happy Birthday!</h3>
             <p>Transform your birthday into an unforgettable celebration with custom cocktails, a vibrant setting, and exclusive touches designed just for you. Let’s make this year’s celebration one to remember!</p>
             <a href="">Sign up
-              <img src="assets/arrowRight.svg" height="25px" alt="">
+              <img src="assets/arrowRight.svg" height="25" alt="">
             </a>
           </div>
         </div>
@@ -104,29 +102,29 @@
     </section>
 
 
-    <section id="showcase">
+    <!-- <section id="showcase">
       <div class="sectionContainer">
-        
+
       </div>
-    </section>
+    </section> -->
 
 
-    <section id="reserve">
+    <section id="reserve" class="reserve">
       <div class="sectionContainer">
         <div class="textContainer">
           <h2>Reserve your table today</h2>
           <p>Book a table for an unforgettable experience.</p>
         </div>
         <div class="inputContainer">
-          <div class="inputWithButton">
-            <input type="tel" name="" id="" placeholder="Your phone number here">
-            <button type="button" class="accentBG">Book now</button>
-          </div>
-          <p>*By clicking Book Now, you agree to our Terms and Conditions.</p>
+          <form class="inputWithButton">
+            <input type="tel" name="tel" id="tel" placeholder="Your phone number here" required>
+            <button type="submit" class="accentBG">Book&nbspnow</button>
+          </form>
+          <p>*By clicking Book now, you agree to our <a href="#reserve">terms & conditions.</a></p>
         </div>
       </div>
     </section>
-    <section id="craft">
+    <section id="craft" class="craft">
       <div class="sectionContainer">
         <div class="textContainer">
           <h2>Craft your own signature sip!</h2>
@@ -147,9 +145,28 @@
         <img src="assets/craft.png" alt="">
       </div>
     </section>
+    <section id="workshop" class="workshop">
+      <div class="sectionContainer">
+        <h2>Plan your perfect event</h2>
+        <p>Join our cocktail-macking workshop and unleash your creativity!</p>
+        <form action="" method="post" name="event">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+          <label for="message"></label>
+          <textarea name="message" id="message" placeholder="Your message here..." rows="7"></textarea>
+          <p>*By clicking Submit, you agree to our <a href="#workshop">terms & conditions.</a></p>
+          <button type="submit" class="accentBG">Submit</button>
+        </form>
+      </div>
+    </section>
 </main>
 
 <footer>
+  <div class="sectionContainer">
+    div.links
+  </div>
     <p>&copy; 2024 Relume. All rights reserved.</p>
     <p>Last update: Nov 2024</p>
 </footer>
