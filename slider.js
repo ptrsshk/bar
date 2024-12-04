@@ -7,7 +7,7 @@ let position = 0;
 let numberOfClicks = window.innerWidth <= 768 ? 5 : 3
 let offsetIndex = 0
 let resizeTimeout
-let padding = parseInt(window.getComputedStyle(sliderContainer).getPropertyValue('padding-left'))
+let padding = parseInt(window.getComputedStyle(sliderSection).getPropertyValue('padding-left'))
 
 window.addEventListener('resize', (e) => {
   if ( !resizeTimeout ) {
@@ -26,7 +26,7 @@ window.addEventListener('resize', (e) => {
 }, false)
 
 btnRight.addEventListener('click', () => {
-  position -= (2080 + padding*2 + parseInt(window.getComputedStyle(sliderContainer).marginLeft)*2 - sliderSection.offsetWidth)/numberOfClicks
+  position -= (2080 + padding*2 - sliderContainer.offsetWidth)/numberOfClicks
   console.log(sliderSection.offsetWidth, window.getComputedStyle(sliderContainer).marginLeft);
   slider.forEach((slide) => {
     slide.style.left = `${position}px`
@@ -40,7 +40,7 @@ btnRight.addEventListener('click', () => {
   }
 })
 btnLeft.addEventListener('click', () => {
-  position += (2080 + padding*2 + parseInt(window.getComputedStyle(sliderContainer).marginLeft)*2 - sliderSection.offsetWidth)/numberOfClicks
+  position += (2080 + padding*2 - sliderContainer.offsetWidth)/numberOfClicks
   console.log(sliderSection.offsetWidth, window.getComputedStyle(sliderContainer).marginLeft);
   slider.forEach((slide) => {
     slide.style.left = `${position}px`

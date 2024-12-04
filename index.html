@@ -10,24 +10,35 @@
 </head>
 <body>
 
-<header>
-  <div class="sectionContainer">
-    <a class="logoContainer" href="/">
-      <img src="assets/logo.png" alt="logo image">
+<header class="page-header">
+  <div class="headerContainer">
+    <a class="logo" href="/">
+      <img src="assets/logo.png" width="48" alt="logo image">
     </a>
-    <nav>
-      <a href="#cocktails">
-        Cocktails
-      </a>
-      <a href="#events">
-        Events
-      </a>
-      <a href="#craft">
-        Workshops
-      </a>
-      <a href="#reserve" class="reserveButton accentBG">
-          Reserve
-      </a>
+    <div class="burger-btn" id="burger-btn"></div>
+    <nav class="navigation">
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link" href="#cocktails">
+            Cocktails
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#events">
+            About
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#craft">
+            Best
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a href="#reserve" class="navigation-link accentBG reserveButton">
+            Reserve
+          </a>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -42,7 +53,7 @@
             <a href="#reserve" class="reserveButton accentBG">
               Reserve
             </a>
-            <a href="">Learn more</a>
+            <a href="#showcase">Learn more</a>
           </div>
         </div>
         <div class="imgContainer">
@@ -62,7 +73,7 @@
             <a href="#reserve" class="reserveButton accentBG">
               Reserve
           </a>
-            <a href="">Our menu</a>
+            <a href="#showcase">Our menu</a>
           </div>
         </div>
       </div>
@@ -102,8 +113,8 @@
     </section>
 
 
-    <section id="showcase">
-      <div class="section-container">
+    <section id="showcase" class="showcase">
+      <div class="sectionContainer">
         <div class="text-container">
           <h2 class="header2">
             Coctail showcase
@@ -188,7 +199,7 @@
       <div class="sectionContainer">
         <h2>Plan your perfect event</h2>
         <p>Join our cocktail-macking workshop and unleash your creativity!</p>
-        <form action="" method="post" name="event">
+        <form method="post" name="event">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" required>
           <label for="email">Email</label>
@@ -234,7 +245,7 @@
     </div>
   </div>
 </footer>
-
+<script type="module" src="header.js"></script>
 <script type="module" src="slider.js"></script>
 </body>
 </html>

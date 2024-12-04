@@ -70,33 +70,155 @@ button {
   padding: 12px 30px;
   background-color: $orange;
   border-radius: 10px;
-  &:hover {
-    text-shadow: none;
+  @media (hover: hover) {
+    &:hover {
+      color: $text;
+    }
   }
 }
-header {
+
+.page-header {
+  display: flex;
+  justify-content: center;
   position: sticky;
   top: 0;
-  background-color: $bg;
-  .sectionContainer {
-    height: 82px;
+  background-color: white;
+  z-index: 4;
+  transition: 0.5s ease-in-out;
+  .headerContainer {
     display: flex;
-    padding: 0 50px;
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px 50px;
     justify-content: space-between;
     align-items: center;
-    nav {
+    padding: 12px 50px;
+    .header-buttons {
       display: flex;
-      align-items: center;
-      gap: 32px;
+      width: 100%;
+      justify-content: space-between;
     }
-    a {
-      
-      img {
-      height: 50px;
+  }
+  @media (max-width: 768px) {
+    .burger-btn {
+      display: block;
+    }
+    .navigation {
+      position: fixed;
+      top: 64px;
+      bottom: 0;
+      left: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: white;
+      transition: left 0.3s ease-in;
+      .navigation-link {
+        font-size: 20px;
+        line-height: 150%;
+        transition:
+          color 0.4s ease,
+          background-color 0.4s ease;
+      }
+      &.active {
+      left: 0;
+      }
+      .navigation-list {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        text-align: center;
+        overflow: scroll;
       }
     }
   }
 }
+.burger-btn {
+  display: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    cursor: pointer;
+  }
+  &::before,&::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 20px;
+    border-radius: 2px;
+    background-color: $text;
+    transition: transform 0.3s ease-in-out, top 0.3s 0.3s ease-in-out, bottom 0.3s 0.3s ease-in-out;
+  }
+  &::before {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);  
+  }
+  &::after {
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.active {
+    &::before, &::after {
+      transition: top 0.3s ease-in-out, bottom 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out;
+    }
+    &::before {
+      top: 19.5px;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    &::after {
+      bottom: 19.5px;
+      transform: translateX(-50%) rotate(-45deg);
+    }
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;  
+  width: 48px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.navigation-list {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+.navigation-item {
+  list-style: none;
+  font-family: Rufina;
+  display: flex;
+  justify-content: center;
+}
+.navigation-link:not(.reserveButton) {
+  padding: 12px 20px;
+  border-radius: 12px;
+  transition:
+    color 0.4s ease,
+    background-color 0.4s ease;
+  @media (hover: hover) {
+    &:hover {
+      color: $orange;
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      color: $orange;
+    }
+  }
+}
+
+
 a {
   text-decoration: none;
   color: black;
@@ -447,16 +569,15 @@ footer {
 }
 
 
-#showcase {
-  overflow: hidden;
-  max-width: 1440px;
-  .section-container {
+.showcase {
+  .sectionContainer {
+    padding: 50px 50px;
+    @media (max-width: 650px) {
+      padding: 50px 25px;
+    }
     display: flex;
-    max-width: none;
     flex-direction: column;
     gap: 20px;
-    margin: 0;
-    padding: 50px 0;
     .text-container {
       display: flex;
       flex-direction: column;
@@ -468,9 +589,10 @@ footer {
 }
 .slider-container {
   max-width: 1400px;
+  overflow: hidden;
   width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
   z-index: -1;
   display: flex;
   gap: 20px; 
@@ -493,7 +615,6 @@ footer {
   width: 100%;
   gap: 20px;
   margin: 0 auto;
-  padding: 0 50px;
   justify-content: end;
 }
 .control {
@@ -590,17 +711,8 @@ footer {
   }
 }
 @media (max-width: 650px) {
-  header {
-    .sectionContainer {
-      padding: 0 25px;
-      nav {
-        display: none;
-        gap: 10px;
-        a.reserveButton {
-          padding: 8px 20px;
-        }
-      }
-    }
+  .page-header .headerContainer {
+    padding: 12px 25px;
   }
   .sectionContainer {
     padding: 50px 25px;
@@ -609,7 +721,7 @@ footer {
     }
     .textContainer {
       p {
-        font-style: 14px;
+        font-size: 14px;
       }
       h2 {
         font-size: 35px;
@@ -625,7 +737,6 @@ footer {
   h2 {
     font-size: 30px;
   }
-  
   .discover {
     h1 {
       font-size: 40px;
@@ -647,9 +758,6 @@ footer {
         font-size: 12px;
       }
     }
-  }
-  .slider-container{
-    padding: 0 25px;
   }
   .controls-container{
     padding: 0 25px;
