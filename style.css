@@ -283,6 +283,11 @@ main section {
 .discover .containerText h1 {
   max-width: 700px;
 }
+@media (max-width: 360px) {
+  .discover .containerText h1 {
+    font-size: 30px;
+  }
+}
 .discover .containerText p {
   max-width: 560px;
 }
@@ -446,6 +451,12 @@ main section {
   display: flex;
   gap: 50px;
 }
+@media (max-width: 500px) {
+  .craft .sectionContainer .textContainer .offersContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .craft .sectionContainer .textContainer .offersContainer .offer {
   display: flex;
   flex-direction: column;
@@ -458,6 +469,11 @@ main section {
 }
 .craft .sectionContainer .textContainer .offersContainer .offer img {
   width: 48px;
+}
+@media (max-width: 500px) {
+  .craft .sectionContainer .textContainer .offersContainer .offer img {
+    align-self: center;
+  }
 }
 
 .workshop {
@@ -531,7 +547,7 @@ footer .sectionContainer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  gap: 10px;
 }
 footer .sectionContainer .social-networks {
   display: flex;
@@ -558,6 +574,14 @@ footer .sectionContainer .social-link svg > path {
 }
 footer .sectionContainer .copyright {
   pointer-events: none;
+  text-align: center;
+}
+footer .sectionContainer table caption {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+footer .sectionContainer table td {
+  padding: 3px 10px;
 }
 
 .showcase .sectionContainer {
@@ -683,7 +707,6 @@ footer .sectionContainer .copyright {
   }
   .workshop .sectionContainer p {
     text-align: center;
-    max-width: 80%;
   }
   .workshop .sectionContainer form input[type=text], .workshop .sectionContainer form input[type=email] {
     padding: 7px;
